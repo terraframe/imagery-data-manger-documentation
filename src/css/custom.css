@@ -1,0 +1,108 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ *
+ * Colors follow the IDM app theme (osmre-uav uasdm-ui/src/styles/theme.css):
+ *   #007276 turquoise (links, primary actions), #7C868D grey (header),
+ *   #D7BD0C yellow (accent), #B6D7D8 light turquoise.
+ */
+
+:root {
+  /* IDM turquoise. Shades are the Docusaurus +/-10/15/30% lightness steps. */
+  --ifm-color-primary: #007276;
+  --ifm-color-primary-dark: #00676a;
+  --ifm-color-primary-darker: #006164;
+  --ifm-color-primary-darkest: #005053;
+  --ifm-color-primary-light: #007d82;
+  --ifm-color-primary-lighter: #008388;
+  --ifm-color-primary-lightest: #009499;
+
+  /* The app header grey (#7C868D), darkened slightly so white text meets
+     WCAG AA contrast (5:1 instead of 3.7:1). */
+  --idm-header-grey: #677076;
+  --idm-accent-yellow: #D7BD0C;
+  --idm-light-turquoise: #B6D7D8;
+
+  --ifm-font-family-base: Roboto, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --ifm-heading-color: #3f3f3f;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-navbar-background-color: var(--idm-header-grey);
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #ffffff;
+  --ifm-footer-background-color: #4b5257;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* The app's hover turquoise (#00adb3), readable on the dark background. */
+  --ifm-color-primary: #00adb3;
+  --ifm-color-primary-dark: #009ca1;
+  --ifm-color-primary-darker: #009398;
+  --ifm-color-primary-darkest: #00797d;
+  --ifm-color-primary-light: #00bec5;
+  --ifm-color-primary-lighter: #00c7ce;
+  --ifm-color-primary-lightest: #00e1e9;
+  --ifm-heading-color: #e3e3e3;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-navbar-background-color: #3d4347;
+  --ifm-footer-background-color: #2a2e31;
+}
+
+/* Header: grey bar with the yellow accent stripe, like the app */
+.navbar {
+  border-bottom: 3px solid var(--idm-accent-yellow);
+  box-shadow: none;
+}
+
+.navbar__title,
+.navbar__link,
+.navbar__toggle,
+.navbar__inner .clean-btn,
+.navbar-sidebar__brand .clean-btn {
+  color: #ffffff;
+}
+
+/* Underline instead of a color change: yellow text on grey isn't readable */
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: var(--idm-accent-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+/* Mobile menu: Docusaurus paints it with the navbar color. Keep only its top
+   bar grey so the page links below stay readable. */
+.navbar-sidebar {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.navbar-sidebar__brand {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+/* The version menu opens on a light panel, so its items keep normal colors */
+.navbar .dropdown__menu .dropdown__link {
+  color: var(--ifm-dropdown-link-color);
+}
+
+/* Sidebar: mark the current page with a turquoise bar */
+.menu__link--active:not(.menu__link--sublist) {
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+}
+
+/* Screenshots: subtle frame so they stand out from the page */
+.markdown img {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+}
+
+/* Screenshots inside tables (e.g. button/feature tables) shouldn't dominate the row */
+.markdown table img {
+  max-width: 320px;
+}
