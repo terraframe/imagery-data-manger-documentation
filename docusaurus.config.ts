@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'IDM Documentation',
-  tagline: 'Imagery Data Management platform documentation',
+  tagline: 'Imagery Data Manager platform documentation',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -28,9 +28,11 @@ const config: Config = {
   },
 
   // Values that differ between IDM deployments. Use them in docs with
-  // <Deployment value="appUrl" /> instead of hard coding them.
+  // <Deployment value="appUrl" /> instead of hard coding them, and add
+  // <DeploymentNote value="appUrl" /> to tell other installations what to change.
   customFields: {
     deployment: {
+      name: 'DOI GeoPlatform',
       appUrl: 'https://aim.geoplatform.gov/',
       knowStacUrl: 'https://knowstac.geoprism.net/dev/',
       publicBucketUrl: 'https://osmre-uas-prod-public.s3.amazonaws.com',
@@ -69,6 +71,20 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  // Local search: the index is built with the site, so no external service is needed.
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        // Docs are served from the site root (routeBasePath: '/')
+        docsRouteBasePath: '/',
+        indexBlog: false,
+        highlightSearchTermsOnTargetPage: true,
+      },
     ],
   ],
 

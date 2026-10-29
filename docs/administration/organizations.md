@@ -3,7 +3,7 @@ title: Organizations
 sidebar_position: 4
 ---
 
-Organizations (bureaus) are pulled from [SAM.gov](https://sam.gov) into an instance of GeoPrism Registry that’s managed for IDM. IDM then pulls those from GeoPrism Registry through a formal synchronization widget in IDM.
+Organizations are pulled from [SAM.gov](https://sam.gov) into an instance of GeoPrism Registry that’s managed for IDM. IDM then pulls those from GeoPrism Registry through a formal synchronization widget in IDM.
 
 ## View the List of Organizations
 

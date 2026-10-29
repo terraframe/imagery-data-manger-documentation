@@ -36,7 +36,7 @@ If you do not have a serial number or FAA number but must still register the UAV
 | Serial Number | Yes | Serial number of the UAV. |
 | FAA Number | Yes | FAA number of the UAV. Up to 10 characters. |
 | Description | No | Description of the UAV or any information that might be useful to know about this registration. |
-| Organization | Yes | Organization that the UAV belongs to. Start typing in the field to search for the organization (bureau), then select it from the list. |
+| Organization | Yes | Organization that the UAV belongs to. Start typing in the field to search for the organization, then select it from the list. |
 
 ## Edit a UAV Registration
 

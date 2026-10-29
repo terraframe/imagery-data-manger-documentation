@@ -51,6 +51,12 @@ Data uploads go through two basic steps.
 
 The post processing step (step 2 above) can take more time than the initial upload (step 1 above). You can monitor the progress of the upload in the Processing Jobs section of the [Workflow Tasks](../workflow-tasks.md) page.
 
+:::info
+
+If the upload fails, see [Upload Errors](../troubleshooting-processing-errors.md#upload-errors) in Troubleshooting Processing Errors.
+
+:::
+
 ## After an Upload is Complete
 
 Now that your data has been successfully uploaded you can manage that data from the [collection modal](../organizing-data/collections.md#the-collection-modal). You can access the collection modal from several locations in the application:

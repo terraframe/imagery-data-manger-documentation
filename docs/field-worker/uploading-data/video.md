@@ -31,6 +31,14 @@ Videos can be uploaded to the raw directory of collections for storage as well a
 
 :::info
 
-OPTIONAL: Once your video is uploaded you can navigate to the video tab of your collection to see all uploaded videos and preview them as needed.
+OPTIONAL: Once your video is uploaded you can navigate to the raw tab of your collection to see all uploaded videos and preview them as needed. Collections created before collection formats were added show videos on a separate *video* tab instead.
 
 :::
+
+## Processing Into Products
+
+IDM extracts still frames from uploaded video and processes them into ortho mosaics, elevation models (DSM and DTM) and point clouds, the same way as still imagery.
+
+- [Process Raw Data Into Products](../products/generating-products.md#process-raw-data-into-products): the steps for starting a processing job. Excluding individual images isn't available for video.
+- [Imagery Products](../products/generating-products.md#processing-outputs): the files each product type creates.
+- [Advanced Settings Fields](../products/generating-products.md#advanced-settings-fields): see *Video Resolution* and *Video Limit*, which control the size and number of frames extracted from the video.

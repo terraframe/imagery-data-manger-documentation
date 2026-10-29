@@ -50,7 +50,7 @@ A published product can't be deleted; unpublish it first. A collection with publ
 
 ## What is Know-STAC
 
-Know-STAC (Knowledge-Enabled STAC) is a semantic layer and storage application for making STAC searches interoperable across agencies and domains. STAC (Spatio Temporal Asset Catalog) is a standard for describing and organizing cloud native data on the cloud. IDM ortho mosaics, elevation rasters, and point clouds are all stored in cloud native formats which are all registered in Know-STAC when published. This means that products published in IDM are more:
+Know-STAC (Knowledge-Enabled STAC) is a semantic layer and storage application for making STAC searches interoperable across agencies and domains. STAC (Spatio Temporal Asset Catalog) is a standard for describing and organizing cloud native data on the cloud. IDM ortho mosaics and elevation rasters are stored as Cloud Optimized GeoTIFFs, a [cloud native format](../getting-started/cloud-native-formats.md), and are registered in Know-STAC when published. This means that products published in IDM are more:
 
 - findable because that data is part of a standardized STAC specification
 - accessible because the data a Know-STAC item points to are in cloud native formats

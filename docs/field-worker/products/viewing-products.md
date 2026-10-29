@@ -9,7 +9,7 @@ Products can be viewed from the products tab of a collection or from the Product
 
 You can view and download output products on the products tab of the [collection modal](../organizing-data/collections.md#the-collection-modal). The tab lists each [product group](uploading-products.md#product-groups) in the collection, with a table of its files: Type, Name, Processing Software, Date, File Size and Description. Click a file name to download it.
 
-Each processing run creates a new product group, and the newest group becomes the primary group. If you would like to recreate the products using a different set of images, you can [process the imagery again](generating-products.md); earlier product groups are kept until you delete them.
+Product groups are created by [processing the collection](generating-products.md#product-groups), with each run's *Product name* as the group's name, or manually with the *Create product group* button to hold [uploaded products](uploading-products.md#product-groups). The newest group becomes the primary group. If you would like to recreate the products using a different set of images or settings, [process the imagery again](generating-products.md) with a new *Product name*; earlier product groups are kept until you delete them.
 
 ## Viewing Products in the Site Viewer
 
@@ -31,6 +31,8 @@ Clicking on the preview thumbnail of a product will bring up a larger preview to
 | Delete | Brings up a modal that asks you to confirm that you want to delete the product, and removes the selected product if you select “Delete”. Only the collection's owner and Administrators can delete products. Not shown for locked or published products. |
 | Publish / Unpublish | Publishes the product to the public. Once a product is published this option will change to “Unpublish” and you may select this to make the product no longer available to the public. Not shown for locked products. See [Publishing Products](../publishing-products.md). |
 | Share | Only shown for published products. Opens the public links for the product. See [Sharing a Published Product](../publishing-products.md#sharing-a-published-product). |
+
+*Aerial* and *Hillshade* stream the layer from the product's Cloud Optimized GeoTIFF, and *3D* streams the point cloud, so only the area you're viewing is downloaded. See [Cloud Native Formats](../../getting-started/cloud-native-formats.md).
 
 ### Locked Products
 

@@ -7,9 +7,14 @@ Products created or refined using external tools can be uploaded to the products
 
 ## Product Groups
 
-Products in a collection are organized into product groups. Each group can hold one ortho, one DSM, one DTM and one point cloud, plus a report for each. Each time a collection is [processed](generating-products.md), a new product group is created.
+Products in a collection are organized into product groups. Each group can hold one ortho, one DSM, one DTM and one point cloud, plus a report for each.
 
-One product group in each collection is the *primary* group. The primary group is the one downloaded by the collection's *Download All* button. A new product group, whether created by processing or with *Create product group*, becomes the primary group.
+There are two ways to create a product group:
+
+- **By processing.** [Processing a collection](generating-products.md#product-groups) creates a product group named after the *Product name* you enter. If a group with that name already exists, the outputs are added to it.
+- **Manually.** Click *Create product group* on the collection's products tab and enter a *Product name*. The group starts empty, and you fill it by uploading products, as described in [Upload a Product](#upload-a-product). If a group with that name already exists, IDM uses that group instead of creating a new one.
+
+One product group in each collection is the *primary* group. The primary group is the one downloaded by the collection's *Download All* button. A new product group, whether created by processing imagery or with *Create product group*, becomes the primary group.
 
 - To make a different group primary, click *Make Primary* on it.
 - To delete a group, click *Delete Group* on it. The primary group can't be deleted directly; make another group primary first.
@@ -46,7 +51,7 @@ Each product can also be uploaded inside a .zip or .tar.gz file.
 
 | Field | Shown for | Description |
 |---|---|---|
-| Process upload | Ortho | Select whether you want IDM to generate the supporting files needed to view and stream your data or (if un-checked) to simply store the file as uploaded.<br /><br />**If checked,** IDM converts the file to a Cloud Optimized GeoTIFF (COG) and a PNG preview image (thumbnail).<br /><br />**If unchecked,** the file is still uploaded and attached to the product, but it won't have a preview and won't be viewable on IDM's map.<br /><br />Un-check this option if the file is already in the format you want to store it in and you don't want IDM to create derivatives for additional IDM functionality beyond storage.<br /><br />NOTE: Uploaded ortho and elevation products are kept in their original format while an additional COG is created to support cloud native functionality in IDM and for publishing. |
+| Process upload | Ortho | Select whether you want IDM to generate the supporting files needed to view and stream your data or (if un-checked) to simply store the file as uploaded.<br /><br />**If checked,** IDM converts the file to a Cloud Optimized GeoTIFF (COG) and a PNG preview image (thumbnail).<br /><br />**If unchecked,** the file is still uploaded and attached to the product, but it won't have a preview and won't be viewable on IDM's map.<br /><br />Un-check this option if the file is already in the format you want to store it in and you don't want IDM to create derivatives for additional IDM functionality beyond storage.<br /><br />NOTE: Uploaded ortho and elevation products are kept in their original format while an additional COG is created to support cloud native functionality in IDM and for publishing. See [Cloud Native Formats](../../getting-started/cloud-native-formats.md). |
 | Ortho Correction Model | Ortho | The elevation model the ortho was corrected (orthorectified) with: DSM, DTM or Unknown. |
 | Enable Potree viewer for point cloud | Point cloud | If checked, IDM builds a tiled version of the point cloud (Potree format). This is required for the point cloud to be viewable in the web-based Potree viewer. If unchecked, the file is stored but won't render in that viewer. |
 | Point Cloud EPSG Number | Point cloud | The EPSG code of the point cloud's coordinate system. |

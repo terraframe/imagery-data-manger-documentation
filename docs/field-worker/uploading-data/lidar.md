@@ -31,3 +31,10 @@ LiDAR can be uploaded to the raw directory of collections for storage as well as
 OPTIONAL: Once your data is uploaded you can navigate to the collection and [process your raw data into derivative products](../products/generating-products.md). You can monitor the upload on the [Workflow Tasks](../workflow-tasks.md) page.
 
 :::
+
+## Processing Into Products
+
+An uploaded LiDAR point cloud can be converted to a Cloud Optimized Point Cloud (COPC), and used to create tree canopy cover, ground surface model and terrain model rasters.
+
+- [Process Raw Data Into Products](../products/generating-products.md#process-raw-data-into-products): the steps for starting a processing job.
+- [LiDAR Products](../products/generating-products.md#lidar-options): the products you can create from LiDAR data, and how they depend on each other.

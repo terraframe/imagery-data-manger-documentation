@@ -3,7 +3,7 @@ title: Help Pages
 sidebar_position: 11
 ---
 
-Administrators can write a help page for each organization (bureau). When users click *Need some help?* in the IDM header, they see the help page for their organization. This should be the first place users go for support, so use it to tell them how to reach your bureau's help desk. See [Getting Help](../getting-started/getting-help.md) for what users see.
+Administrators can write a help page for each organization. When users click *Need some help?* in the IDM header, they see the help page for their organization. This should be the first place users go for support, so use it to tell them how to reach your organization's help desk. See [Getting Help](../getting-started/getting-help.md) for what users see.
 
 ## Which Page Users See
 
@@ -25,16 +25,16 @@ Users see the help page for the organization assigned to their [account](account
 
 The template has sections for:
 
-- your bureau's help desk contacts: portal URL, email, phone, support hours and preferred contact method
+- your organization's help desk contacts: portal URL, email, phone, support hours and preferred contact method
 - instructions on which contact method to use
 - templates users can copy for bug reports, feature requests and general questions
-- bureau-specific documentation and training resources
+- organization-specific documentation and training resources
 - other notes, such as policies or escalation guidance
 
-Replace the placeholder text in brackets with your bureau's details, and remove any sections you don't need.
+Replace the placeholder text in brackets with your organization's details, and remove any sections you don't need.
 
 :::tip
 
-Tell users when to escalate to the IDM help desk at [support@terraframe.com](mailto:support@terraframe.com), which provides general IDM support when bureau support isn't adequate.
+Tell users when to escalate to the IDM help desk at [support@terraframe.com](mailto:support@terraframe.com), which provides general IDM support when organization support isn't adequate. See [Getting Help](../getting-started/getting-help.md).
 
 :::

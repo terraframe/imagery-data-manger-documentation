@@ -1,6 +1,6 @@
 # IDM Documentation
 
-Documentation for the Imagery Data Management (IDM) platform, built with [Docusaurus](https://docusaurus.io/) and published to GitHub Pages at https://terraframe.github.io/imagery-data-manger-documentation/.
+Documentation for the Imagery Data Manager (IDM) platform, built with [Docusaurus](https://docusaurus.io/) and published to GitHub Pages at https://terraframe.github.io/imagery-data-manger-documentation/.
 
 ## Local Development
 
@@ -20,6 +20,8 @@ npm run serve
 
 Search is only available in the production build.
 
+To add or upgrade a package, use npm 11 (`npx npm@11 install <package>`). npm 10.9 hangs while resolving the dependency tree of `@easyops-cn/docusaurus-search-local`. Installing from the existing lock file (`npm install` or `npm ci`) works with either version.
+
 ## Writing Docs
 
 - Pages live in `docs/`. The sidebar is generated from the folder structure. Order pages with `sidebar_position` front matter and folders with `_category_.json`.
@@ -33,7 +35,11 @@ Values that differ between IDM deployments, such as the application URL, are set
 
 ```md
 You can access the application at <Deployment value="appUrl" />.
+
+<DeploymentNote value="appUrl" />
 ```
+
+`DeploymentNote` adds an "Other installations" note telling readers on other IDM installations which part of the address to replace. Add one to any page that shows a deployment-specific address. `name` is the installation name used in that note (for example `DOI GeoPlatform`).
 
 To build the docs for a different IDM deployment, change those values.
 

@@ -23,7 +23,7 @@ Check the file types in your archive against the [supported file formats](field-
 
 ### My upload appears to be processing indefinitely. How can I find out if there are any error messages?
 
-All error messages for processing tasks that are accessible from IDM are found by expanding the processing task on the [Workflow Tasks](field-worker/workflow-tasks.md) page.
+All error messages for processing tasks that are accessible from IDM are found by expanding the processing task on the [Workflow Tasks](field-worker/workflow-tasks.md) page. See [Troubleshooting Processing Errors](field-worker/troubleshooting-processing-errors.md) for what each error means and how to fix it.
 
 ![](img/image-20250520-233213.png)
 
@@ -33,7 +33,7 @@ In cases where the log output from Open Drone Map (ODM) is able to be captured t
 
 ### I started processing a dataset a couple weeks ago and it shows that it is still processing. How can I terminate it or restart it?
 
-There is no way to terminate a running processing task. A processing task is allowed to run for a maximum amount of time (currently seven days). If your processing task has been running longer than the maximum time please [contact IDM support](getting-started/getting-help.md) to report your issue.
+There is no way to terminate a running processing task. If a step stops reporting progress, IDM fails it with the message "The task timed out (was processing for too long with no updates)." This happens after 1 day without updates for ODM processing, 3 days for storing ODM results, and 7 days for most other steps. See [Timeouts and Interrupted Jobs](field-worker/troubleshooting-processing-errors.md#timeouts-and-interrupted-jobs). If your task still shows as processing after that, please [contact IDM support](getting-started/getting-help.md) to report your issue.
 
 ### The FAA ID field isn’t auto-populating with my aircraft when I begin typing in the values. How can I get IDM to recognize my aircraft?
 

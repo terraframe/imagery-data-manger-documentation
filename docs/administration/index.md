@@ -24,7 +24,7 @@ The System Configuration page has a section for each of these, from top to botto
 - [Icons](icons.md) (*Manage System Images*): change the IDM logo.
 - [Email Settings](email-settings.md) (*System Email*): configure the email server used for notifications.
 - [Session Event Log](session-event-log.md): monitor user sign-ins.
-- [Organizations](organizations.md) (*Organizations* and *Organization Integrations*): synchronize the organizations (bureaus) users and data belong to.
+- [Organizations](organizations.md) (*Organizations* and *Organization Integrations*): synchronize the organizations users and data belong to.
 - [Custom Hierarchies](custom-hierarchies.md) (*GeoPrism Registry Integrations*): import geographic hierarchies for filtering sites in the Site Viewer.
 
 ## System Info
@@ -33,6 +33,6 @@ The System Configuration page has a section for each of these, from top to botto
 
 ## Other Administration Tasks
 
-- [Help Pages](help-pages.md): write the bureau-specific help pages users see when they click *Need some help?*.
+- [Help Pages](help-pages.md): write the organization-specific help pages users see when they click *Need some help?*.
 - [Reporting](reporting.md): collection and processing quality reports, from the *Report* menu item. The collection report is available to all users; the processing quality report is only available to Administrators.
 - [Public Image Services](public-image-services.md): access published products as Cloud Optimized GeoTIFFs.

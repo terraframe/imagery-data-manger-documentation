@@ -3,7 +3,7 @@ title: Public Image Services
 sidebar_position: 6
 ---
 
-IDM hosts all published image mosaic and elevation products in the public SpatioTemporal Asset Catalog (STAC), [Know-STAC](../know-stac.md), making these products available as Cloud Optimized GeoTIFFs (COG). This means that all published COGs are available from standard COG API functionality.
+IDM hosts all published image mosaic and elevation products in the public SpatioTemporal Asset Catalog (STAC), [Know-STAC](../know-stac.md), making these products available as Cloud Optimized GeoTIFFs (COG). This means that all published COGs are available from standard COG API functionality. See [Cloud Native Formats](../getting-started/cloud-native-formats.md) for why IDM uses COGs.
 
 ## Finding the URL of a Published COG
 
@@ -28,12 +28,14 @@ For example:
 
 <code><Deployment value="publicBucketUrl" plain />/justins_test_site/project/mission/flooddamagetest/products/1728194256657/ortho/odm_orthophoto.cog.tif</code>
 
-- <code><Deployment value="publicBucketUrl" plain /></code> is the public bucket.
+- <code><Deployment value="publicBucketUrl" plain /></code> is the public bucket of the <Deployment value="name" /> installation. Each installation of IDM publishes to its own bucket.
 - `justins_test_site/project/mission/flooddamagetest` is the path to the collection, starting at the site.
 - `products/1728194256657` is the product group. Each processing run or [uploaded product](../field-worker/products/uploading-products.md#product-groups) creates its own group, so this part is different for every product.
 - `ortho/odm_orthophoto.cog.tif` is the file within the product group.
 
 The file path depends on how the product was made. For example, an ortho mosaic produced by IDM processing is at `ortho/odm_orthophoto.cog.tif`, but elevation files and uploaded products use other paths and file names. Use the STAC item to get the exact URL rather than guessing the file path.
+
+<DeploymentNote value="publicBucketUrl" />
 
 ## Adding a Published COG to Quantum GIS (QGIS)
 

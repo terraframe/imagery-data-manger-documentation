@@ -47,3 +47,11 @@ It is best to zip all images you want to upload into a single .zip file rather t
 OPTIONAL: Once your data is uploaded you can navigate to the collection and [process your raw data into derivative products](../products/generating-products.md). You can monitor the upload on the [Workflow Tasks](../workflow-tasks.md) page.
 
 :::
+
+## Processing Into Products
+
+Multispectral imagery can be processed into ortho mosaics, elevation models (DSM and DTM) and point clouds.
+
+- [Process Raw Data Into Products](../products/generating-products.md#process-raw-data-into-products): the steps for starting a processing job.
+- [Imagery Products](../products/generating-products.md#processing-outputs): the files each product type creates.
+- [Advanced Settings Fields](../products/generating-products.md#advanced-settings-fields): see *Radiometric calibration*, which is set to *CAMERA* by default for multispectral collections so that the outputs contain reflectance values.

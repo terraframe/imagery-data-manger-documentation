@@ -7,6 +7,8 @@ You can access the application at the following URL: <Deployment value="appUrl" 
 
 This URL will direct you to the login screen.
 
+<DeploymentNote value="appUrl" />
+
 1. Click the *Log in with GeoPlatform* button.
 
    ![The Log in with GeoPlatform button](img/login-geoplatform-button.png)

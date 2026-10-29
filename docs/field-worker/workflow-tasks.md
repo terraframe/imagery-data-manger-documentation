@@ -65,6 +65,12 @@ While Open Drone Map is processing a collection, the Process step can also show 
 
 In the case that there are warnings or errors you can troubleshoot the issue by selecting the *Show Messages* button. Select *Hide Messages* to close the list.
 
+:::info
+
+For what each error means and how to fix it, see [Troubleshooting Processing Errors](troubleshooting-processing-errors.md).
+
+:::
+
 ![](img/image-20200521-010550.png)
 
 If the job has failed there will be a message explaining the issue:
@@ -79,7 +85,7 @@ When a step has finished, more buttons may be available to view details and addr
 
 ![](img/image-20200515-215453.png)
 
-See the [Frequently Asked Questions](../faq.md) for common issues.
+See [Troubleshooting Processing Errors](troubleshooting-processing-errors.md) for a list of errors and their fixes, and the [Frequently Asked Questions](../faq.md) for common issues.
 
 ### After a Job Completes
 

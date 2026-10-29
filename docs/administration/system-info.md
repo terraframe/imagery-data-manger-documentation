@@ -7,6 +7,8 @@ The System Information page shows which release of IDM is running. It is updated
 
 To open it, choose *System Info* from the navigation menu. Only Administrators see this menu item, but any signed-in user can open the page directly at <Deployment value="appUrl" path="#/admin/system-info" />.
 
+<DeploymentNote value="appUrl" />
+
 ![The System Information page, with the software versions and a link to the release notes](img/system-info-page.png)
 
 The page shows:

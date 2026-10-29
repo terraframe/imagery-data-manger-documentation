@@ -1,11 +1,19 @@
 ---
-title: Still Imagery
+title: Still Imagery (RGB)
 sidebar_position: 1
 ---
 
 import ZipRequirements from './_zip-requirements.md';
 
 Still imagery (RGB) can be uploaded to the raw directory of collections for storage as well as for further processing into derived products.
+
+## Supported Cameras
+
+Images from most RGB cameras can be uploaded and processed. To process images into products, IDM needs each image's location, either from the GPS information in the image's EXIF header or from a [geo location file](../products/geologger.md).
+
+The following cameras have known limitations in IDM:
+
+1. Sony LR1: Limited support. The LR1 produces very large images, and processing large LR1 collections can fail. Processing has been more successful when a collection's raw data is no more than 20 GB.
 
 ## Requirements
 
@@ -42,3 +50,12 @@ OPTIONAL: Once your data is uploaded you can navigate to the collection and [pro
 ### Including a Ground Control Point (GCP) Configuration File
 
 1. Add the ground control point file to the zip file that contains the other raw images. See [Ground Control Points](../products/ground-control-points.md) for more information.
+
+## Processing Into Products
+
+Still imagery can be processed into ortho mosaics, elevation models (DSM and DTM) and point clouds.
+
+- [Process Raw Data Into Products](../products/generating-products.md#process-raw-data-into-products): the steps for starting a processing job.
+- [Imagery Products](../products/generating-products.md#processing-outputs): the files each product type creates.
+- [Advanced Settings](../products/generating-products.md#advanced-settings): resolution, quality and other processing settings. For radiometric thermal imagery, see *Radiometric calibration* in the [Advanced Settings Fields](../products/generating-products.md#advanced-settings-fields).
+- [Geologger Files](../products/geologger.md) and [Ground Control Points](../products/ground-control-points.md): improving the location accuracy of your products.

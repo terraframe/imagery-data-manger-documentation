@@ -2,6 +2,10 @@
 
 Found while checking these docs against osmre-uav 1.8.6. Code paths are relative to the osmre-uav repo root.
 
+## Bug: processed ortho uploads always fail
+
+`uasdm-server/src/main/java-gen/stub/gov/geoplatform/uasdm/bus/OrthoProcessingTask.java:114` throws `new RuntimeException("Something bad happened")` unconditionally after creating the COG and PNG for any ortho upload with *Process upload* checked that isn't a .tif + .aux.xml archive. This looks like leftover debugging code. The task ends *Failed* with "An error was encountered while processing the imagery. Something bad happened" (`CollectionUploadEvent.java:305`), although the COG and PNG were already created. The troubleshooting docs list this message as a known issue (users check whether the COG and PNG exist, or contact support). Remove that entry once this is fixed.
+
 ## Security: SQL injection in the accounts table filter
 
 `uasdm-server/src/main/java/gov/geoplatform/uasdm/UserInfoPageQuery.java:108,114,124` concatenates the user's filter text straight into SQL (`... LIKE '%" + value.toUpperCase() + "%'`). The parameters map is filled in but not used for these clauses. The account controllers also have no explicit admin check (Runway permissions may cover this; not verified). Please use bound parameters.
@@ -66,6 +70,13 @@ The upload screen's GCP help text shows a UTM example (`uasdm-ui/src/app/site/co
 16. Custom hierarchies (`uasdm-ui/src/app/admin/component/labeled-property-graph-sync/labeled-property-graph-sync.component.ts`): *Create tiles* silently does nothing when the profile has no version. The Edit button is commented out, so `handleOnEdit` can't be reached here or on the organization profile page.
 
 17. The *Upload includes ground control point file* checkbox shows on product (ortho and DEM) uploads, not just raw uploads. Its condition is `(metadata.processOrtho || metadata.processDem) && !isVideo()` (`tus-upload-modal.component.html:237`), and both flags default to true for every upload (`tus-upload-modal.component.ts` `init()`). GCP files are only used when processing raw imagery, so the checkbox probably needs `uploadTarget === 'raw'`.
+
+18. Error reporting:
+    - LiDAR raster generation without a COPC (none in the job and none in a product with that name) ends *Complete* with "No point cloud files to be processed." (`lidar/LidarProcessingTask.java:108-116,148-152`). Nothing was created, so this should probably be *Failed* with a message telling the user to select *Generate COPC*. The docs currently explain the *Complete* behavior.
+    - The *Show Messages* list shows INFO, WARNING and ERROR actions in one table with no type column (`tasks-panel.component.html:84-103`), so users can't tell errors from warnings.
+    - "The filename [name] contains special characters which will be replaced with an underscore." is logged as an ERROR action (`UploadValidationProcessor.java:443`), although nothing fails. It should probably be a WARNING.
+    - "The file [name is not a valid image file]": the closing bracket is in the wrong place (`UploadValidationProcessor.java:434`).
+    - "…try processsing again" typo in `ODMGeoLocationProcessConverter.java:161`.
 
 ## UI text bugs
 
